@@ -29,6 +29,7 @@ const gallery = [
   ["The timber lane", "/gallery/timber-lane.png", "gallery-tall", "center center"],
   ["Western Ghats layers", "/gallery/ghats-coffee.png", "gallery-tall", "center center"],
   ["Pepper on the vine", "/gallery/pepper-vines.png", "gallery-wide", "center center"],
+  ["Pepper beneath the canopy", "/gallery/pepper-canopy.png", "", "center center"],
 ];
 
 const moments = [
@@ -184,7 +185,10 @@ export default function Home() {
       </section>
 
       <section className="resort section-wide">
-        <div className="resort-image"><img src="/gallery/estate-villa.png" alt="A refined villa overlooking coffee-covered hills" loading="lazy" /></div>
+        <div className="resort-image resort-collage">
+          <img className="resort-cabin" src="/gallery/la-cavana-cabin.png" alt="A wooden La Cavana cabin surrounded by trees" loading="lazy" />
+          <img className="resort-hillside" src="/gallery/la-cavana-hillside.png" alt="La Cavana Resort on a green hillside at sunset" loading="lazy" />
+        </div>
         <div className="resort-copy">
           <span>40 minutes away</span>
           <p className="eyebrow">La Cavana Resort, down the road</p>

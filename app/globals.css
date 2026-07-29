@@ -206,6 +206,19 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
 .resort { display:grid; grid-template-columns:1fr 1fr; background:var(--cream); }
 .resort-image { min-height:590px; }
 .resort-image img { width:100%; height:100%; object-fit:cover; object-position:75% center; }
+.resort-collage { position:relative; overflow:hidden; background:#d9d5c9; }
+.resort-collage .resort-cabin { position:absolute; inset:0 0 auto 0; width:100%; height:73%; object-fit:cover; object-position:center; }
+.resort-collage .resort-hillside {
+  position:absolute;
+  right:28px;
+  bottom:24px;
+  width:min(38%,287px);
+  height:auto;
+  max-height:510px;
+  object-fit:contain;
+  border:8px solid var(--paper);
+  box-shadow:0 20px 45px rgba(11,43,36,.22);
+}
 .resort-copy { padding:clamp(48px,7vw,100px); align-self:center; }
 .resort-copy > span { display:inline-block; border:1px solid var(--pine); border-radius:999px; padding:9px 14px; margin-bottom:28px; color:var(--pine); font-size:9px; letter-spacing:.12em; text-transform:uppercase; }
 .resort-copy h2 { font-size:clamp(44px,4vw,64px); }
@@ -286,6 +299,8 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   .life-images img { height:480px; border-radius:180px 180px 12px 12px; }
   .resort { margin:0; }
   .resort-image { min-height:460px; }
+  .resort-collage .resort-cabin { height:68%; }
+  .resort-collage .resort-hillside { right:18px; bottom:18px; width:min(44%,287px); border-width:5px; }
   .story-grid blockquote { min-height:340px; }
   .faq-list summary { font-size:21px; }
   .contact-actions { align-items:flex-start; flex-direction:column; gap:14px; }
