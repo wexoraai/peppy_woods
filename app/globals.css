@@ -227,7 +227,8 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
 .journey-list h3 { font-family:var(--font-display),serif; font-size:26px; font-weight:500; margin:0; }
 .journey-list p { color:rgba(255,255,255,.58); font-size:13px; line-height:1.7; margin:5px 0 0; }
 
-.gallery-heading { display:grid; grid-template-columns:1fr .7fr; gap:9%; align-items:end; margin-bottom:48px; }
+.gallery-heading { display:grid; grid-template-columns:1.35fr .65fr; gap:6%; align-items:end; margin-bottom:48px; }
+.gallery-heading h2 { font-size:clamp(28px,5.3vw,68px); white-space:nowrap; }
 .gallery-heading > p { margin:0 0 4px; color:var(--muted); line-height:1.8; font-size:13px; }
 .gallery-grid {
   display:grid;
