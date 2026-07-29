@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/organic-27167721-c2f6-48e5-bdb6-af97ce1eb68b/styles.css">
+  <script src="_ds/organic-27167721-c2f6-48e5-bdb6-af97ce1eb68b/_ds_bundle.js"></script>
+  <script src="image-slot.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; text-wrap: pretty; overflow-x: clip; background: var(--color-bg); }
+    a { color: var(--color-accent-2-800); }
+    a:hover { color: var(--color-accent-2-900); }
+    @keyframes pw-bob { 0%,100% { transform: translateY(0); opacity:.9; } 50% { transform: translateY(8px); opacity:.5; } }
+    details.pw-faq > summary::-webkit-details-marker { display: none; }
+  </style>
+</helmet>
+
+<sc-if value="{{ showScarcity }}" hint-placeholder-val="{{ true }}">
+  <div style="background: var(--color-accent-2-100); color: var(--color-accent-2-800); text-align: center; padding: 10px 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.04em;">
+    Launch Offer — {{ price }} per acre &nbsp;·&nbsp; Early plots only
+  </div>
+</sc-if>
+
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--color-bg) 88%, transparent); backdrop-filter: blur(12px);">
+  <span class="nav-brand">Peppy Woods</span>
+  <a href="#about" style="text-decoration: none; color: var(--color-text);">About</a>
+  <a href="#invest" style="text-decoration: none; color: var(--color-text);">Investment</a>
+  <a href="#location" style="text-decoration: none; color: var(--color-text);">Location</a>
+  <a href="#gallery" style="text-decoration: none; color: var(--color-text);">Gallery</a>
+  <a href="#faq" style="text-decoration: none; color: var(--color-text);">FAQ</a>
+  <a href="#visit" class="btn btn-primary" style="text-decoration: none; background: var(--color-accent-2-700);" style-hover="background: var(--color-accent-2-800);">Book a site visit</a>
+</nav>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); position: relative;">
+  <div style="position: absolute; right: -140px; top: -180px; width: 420px; height: 420px; border-radius: 50%; background: var(--color-accent-2-200); pointer-events: none; z-index: -1;"></div>
+
+  <section data-screen-label="Hero" style="padding: clamp(64px, 9vw, 120px) 0 56px;">
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(42px, 6vw, 80px); line-height: 1.08; margin: 0 0 0 -0.028em; max-width: 14ch;">
+      <span style="display: block;">Escape the city.</span>
+      <span style="display: block;">Own the hills.</span>
+      <span style="display: block; color: var(--color-accent-2-700);">Build a legacy.</span>
+    </h1>
+    <p style="font-size: 18px; line-height: 1.65; max-width: 56ch; margin: 28px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">
+      A luxury managed plantation near Guthigar, Sullia — on the doorstep of Coorg. Coffee under timber, pepper on the vine, and professionals who tend it all while the land grows for your family.
+    </p>
+    <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 32px;">
+      <a href="#visit" class="btn btn-primary" style="text-decoration: none; background: var(--color-accent-2-700);" style-hover="background: var(--color-accent-2-800);">Book a site visit</a>
+      <a href="#visit" class="btn btn-secondary" style="text-decoration: none; background: var(--color-accent-2-100); color: var(--color-accent-2-900);">Download brochure</a>
+      <a href="#about" class="btn btn-ghost" style="text-decoration: none;">Take the tour</a>
+    </div>
+    <figure class="washed" style="margin: 56px 0 0; border-radius: 32px; overflow: hidden;">
+      <image-slot id="hero-drone" shape="rect" placeholder="Drop your drone shot — mist over the plantation at sunrise" style="width: 100%; aspect-ratio: 21 / 10;"></image-slot>
+    </figure>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="var(--color-accent-2-700)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="animation: pw-bob 2.2s ease-in-out infinite;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </section>
+
+  <section data-screen-label="Numbers" aria-label="Peppy Woods by the numbers" style="padding: 40px 0 64px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: center;">
+    <div data-reveal style="width: 230px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-2-100); display: grid; place-content: center; text-align: center; padding: 24px; box-sizing: border-box;">
+      <p data-count="600" data-suffix="+" style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 46px; margin: 0; color: var(--color-accent-2-700);">600+</p>
+      <p style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; margin: 10px 0 0; max-width: 15ch; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Premium timber trees</p>
+    </div>
+    <div data-reveal style="width: 205px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-2-200); display: grid; place-content: center; text-align: center; padding: 24px; box-sizing: border-box; margin-top: 44px;">
+      <p data-count="100" data-suffix="%" style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 42px; margin: 0; color: var(--color-accent-2-800);">100%</p>
+      <p style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; margin: 10px 0 0; max-width: 14ch; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Managed plantation</p>
+    </div>
+    <div data-reveal style="width: 250px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-2-300); display: grid; place-content: center; text-align: center; padding: 24px; box-sizing: border-box;">
+      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 34px; line-height: 1.15; margin: 0; color: var(--color-accent-2-800);">Coffee<br>+ pepper</p>
+      <p style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; margin: 10px 0 0; max-width: 15ch; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Dual-crop income</p>
+    </div>
+    <div data-reveal style="width: 220px; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent-2-100); display: grid; place-content: center; text-align: center; padding: 24px; box-sizing: border-box; margin-top: 32px;">
+      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 34px; margin: 0; color: var(--color-accent-2-700);">{{ price }}</p>
+      <p style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; margin: 10px 0 0; max-width: 14ch; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Launch price / acre</p>
+    </div>
+  </section>
+
+  <section id="about" data-screen-label="About" data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px clamp(32px, 5vw, 80px); align-items: center; padding: 64px 0;">
+    <figure class="washed" style="margin: 0; border-radius: 32px; overflow: hidden;">
+      <image-slot id="about-estate" shape="rect" placeholder="Drop an estate photograph — coffee rows under timber" style="width: 100%; aspect-ratio: 4 / 5;"></image-slot>
+    </figure>
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">About Peppy Woods</span>
+      <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0;">A plantation designed for generations</h2>
+      <p style="font-size: 16.5px; line-height: 1.7; margin: 24px 0 0; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 80%, transparent);">
+        Imagine waking to mist-covered hills, the aroma of fresh coffee, and mornings that belong entirely to you. Peppy Woods is more than farmland — it is a professionally managed plantation for people who want wealth creation, a slower way of life, and something worth handing down.
+      </p>
+      <p style="font-size: 16.5px; line-height: 1.7; margin: 16px 0 0; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 80%, transparent);">
+        You own the land, titled in your name. Soil Systems and an expert plantation team do the rest — planting, tending, harvesting — season after season.
+      </p>
+    </div>
+  </section>
+
+  <section id="invest" data-screen-label="Why invest" style="padding: 64px 0;">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">Why invest</span>
+    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0 0 40px; max-width: 22ch;">One acre, many ways it works for you</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 20px;">
+      <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="8">
+        <div class="card" data-reveal style="transition: transform .35s ease, box-shadow .35s ease;" style-hover="transform: translateY(-5px); box-shadow: var(--shadow-lg);">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--color-accent-2-100); display: grid; place-content: center; color: var(--color-accent-2-800); margin-bottom: 16px;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="{{ r.icon }}"></path></svg>
+          </div>
+          <p class="card-title" style="margin: 0 0 8px;">{{ r.title }}</p>
+          <p class="card-body" style="margin: 0;">{{ r.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Investment model" data-reveal style="padding: 64px 0;">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">The model</span>
+    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0 0 44px; max-width: 20ch;">From purchase to legacy</h2>
+    <div style="display: flex; flex-direction: column; gap: 0; max-width: 640px;">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="7">
+        <div style="display: grid; grid-template-columns: 56px 1fr; gap: 0 24px;">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-accent-2-100); color: var(--color-accent-2-800); display: grid; place-content: center; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 18px; flex-shrink: 0;">{{ s.n }}</div>
+            <sc-if value="{{ s.notLast }}" hint-placeholder-val="{{ true }}">
+              <div style="width: 3px; flex: 1; min-height: 28px; border-radius: 2px; background: var(--color-accent-2-200); margin: 6px 0;"></div>
+            </sc-if>
+          </div>
+          <div style="padding: 8px 0 28px;">
+            <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 21px; margin: 0;">{{ s.title }}</p>
+            <p style="font-size: 15.5px; line-height: 1.65; margin: 6px 0 0; max-width: 48ch; color: color-mix(in srgb, var(--color-text) 76%, transparent);">{{ s.body }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="location" data-screen-label="Location" data-reveal style="padding: 64px 0;">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">Location</span>
+      <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0;">In the Western Ghats, on Coorg's doorstep</h2>
+      <p style="font-size: 16.5px; line-height: 1.7; margin: 24px 0 28px; max-width: 50ch; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Near Guthigar in Sullia taluk — cool Ghats climate, waterfall drives, and estate country in every direction.</p>
+      <div style="background: var(--color-accent-2-100); border-radius: 28px; padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px clamp(32px, 5vw, 64px);">
+        <sc-for list="{{ places }}" as="p" hint-placeholder-count="5">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--color-accent-2-700)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span style="font-size: 16px; font-weight: 600;">{{ p.name }}</span>
+            <span style="margin-left: auto; background: var(--color-bg); border-radius: 999px; padding: 6px 14px; font-size: 13.5px; font-weight: 600; color: var(--color-accent-2-800); white-space: nowrap;">{{ p.dist }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" data-screen-label="Gallery" style="padding: 64px 0;">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">Gallery</span>
+    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0 0 36px;">Life at the plantation</h2>
+    <div style="columns: 280px 3; column-gap: 20px;">
+      <sc-for list="{{ shots }}" as="g" hint-placeholder-count="8">
+        <figure class="washed" style="margin: 0 0 20px; border-radius: 24px; overflow: hidden; break-inside: avoid; transition: transform .35s ease;" style-hover="transform: scale(1.02);">
+          <image-slot id="{{ g.id }}" shape="rect" placeholder="{{ g.ph }}" style="width: 100%; aspect-ratio: {{ g.ar }};"></image-slot>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Management" data-reveal style="padding: 64px 0;">
+    <div style="background: var(--color-accent-2-100); border-radius: 32px; padding: clamp(32px, 5vw, 64px);">
+      <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">Plantation management</span>
+      <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px, 3vw, 40px); line-height: 1.15; margin: 0; max-width: 24ch;">You own the land. Professionals grow it.</h2>
+      <p style="font-size: 16.5px; line-height: 1.7; margin: 20px 0 32px; max-width: 56ch; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Soil Systems and an experienced plantation team manage every operation — soil health, irrigation, planting, pruning and harvest — so returns arrive without your weekends going with them.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px;">
+        <sc-for list="{{ flow }}" as="f" hint-placeholder-count="5">
+          <span style="background: var(--color-bg); border-radius: 999px; padding: 12px 22px; font-weight: 600; font-size: 15px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center;">{{ f.label }}</span>
+          <sc-if value="{{ f.notLast }}" hint-placeholder-val="{{ true }}">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--color-accent-2-800)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </sc-if>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Lifestyle" data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px clamp(32px, 5vw, 80px); align-items: center; padding: 64px 0;">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">The life</span>
+      <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0; max-width: 16ch;">Weekends that smell like coffee</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 28px;">
+        <sc-for list="{{ moments }}" as="m" hint-placeholder-count="6">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: var(--color-accent-2); flex-shrink: 0; transform: translateY(1px);"></span>
+            <span style="font-size: 16.5px; line-height: 1.6;">{{ m }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: grid; gap: 20px;">
+      <figure class="washed" style="margin: 0; border-radius: 24px; overflow: hidden;">
+        <image-slot id="life-campfire" shape="rect" placeholder="Drop a campfire evening" style="width: 100%; aspect-ratio: 16 / 10;"></image-slot>
+      </figure>
+      <figure class="washed" style="margin: 0; border-radius: 24px; overflow: hidden; width: 78%; justify-self: end;">
+        <image-slot id="life-walk" shape="rect" placeholder="Drop a family walk in the estate" style="width: 100%; aspect-ratio: 16 / 10;"></image-slot>
+      </figure>
+    </div>
+  </section>
+
+  <section data-screen-label="La Cavana" data-reveal style="padding: 64px 0;">
+    <div class="card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; padding: 0; overflow: hidden; border-radius: 32px;">
+      <figure class="washed" style="margin: 0;">
+        <image-slot id="resort" shape="rect" placeholder="Drop La Cavana Resort imagery" style="width: 100%; height: 100%; min-height: 300px;"></image-slot>
+      </figure>
+      <div style="padding: clamp(28px, 4vw, 56px); align-self: center;">
+        <span class="tag tag-accent-2">40 minutes away</span>
+        <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(26px, 2.8vw, 36px); line-height: 1.15; margin: 18px 0 0;">La Cavana Resort, down the road</h2>
+        <p style="font-size: 16px; line-height: 1.7; margin: 16px 0 0; max-width: 44ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Own the plantation, borrow the resort. Pool days, dining and stays at La Cavana pair with your estate weekends — the best of both.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Testimonials" data-reveal style="padding: 64px 0;">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">Owners' stories</span>
+    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0 0 36px;">People who bought a hill</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="3">
+        <figure class="card" style="margin: 0;">
+          <blockquote style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 20px; line-height: 1.4; margin: 0;">&ldquo;{{ q.text }}&rdquo;</blockquote>
+          <figcaption style="display: flex; align-items: center; gap: 14px; margin-top: 24px;">
+            <image-slot id="{{ q.id }}" shape="circle" placeholder="Photo" style="width: 52px; height: 52px; flex-shrink: 0;"></image-slot>
+            <span>
+              <span style="display: block; font-weight: 700; font-size: 15px;">{{ q.name }}</span>
+              <span style="display: block; font-size: 13.5px; color: color-mix(in srgb, var(--color-text) 65%, transparent);">{{ q.role }}</span>
+            </span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="faq" data-screen-label="FAQ" data-reveal style="padding: 64px 0; max-width: 760px;">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-2-800); margin-bottom: 16px;">Questions</span>
+    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15; margin: 0 0 32px;">Asked often, answered plainly</h2>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="8">
+        <details class="pw-faq" style="background: var(--color-accent-2-100); border-radius: 20px; padding: 4px 24px;">
+          <summary style="list-style: none; cursor: pointer; font-weight: 700; font-size: 16.5px; padding: 16px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px;" style-hover="color: var(--color-accent-2-800);">{{ f.q }}<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--color-accent-2-800)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
+          <p style="font-size: 15.5px; line-height: 1.7; margin: 0 0 18px; color: color-mix(in srgb, var(--color-text) 78%, transparent);">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="visit" data-screen-label="Final CTA" data-reveal style="padding: 32px 0 72px;">
+    <div style="background: var(--color-accent-2-800); border-radius: 40px; padding: clamp(40px, 6vw, 88px) clamp(28px, 5vw, 80px); text-align: left;">
+      <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px, 4.4vw, 60px); line-height: 1.12; margin: 0; color: var(--color-accent-2-100); max-width: 16ch;">
+        <span style="display: block;">Invest in nature.</span>
+        <span style="display: block;">Grow with time.</span>
+        <span style="display: block;">Leave a legacy.</span>
+      </h2>
+      <p style="font-size: 17px; line-height: 1.65; margin: 24px 0 0; max-width: 50ch; color: color-mix(in srgb, var(--color-accent-2-100) 82%, transparent);">Launch pricing at {{ price }} per acre. Come walk the land — the mist does the convincing.</p>
+      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 32px;">
+        <a href="{{ waHref }}" class="btn btn-primary" style="text-decoration: none; background: var(--color-bg); color: var(--color-accent-2-900);" style-hover="background: var(--color-accent-2-100);">Schedule a site visit</a>
+        <a href="{{ waHref }}" class="btn" style="text-decoration: none; background: var(--color-accent-2-100); color: var(--color-accent-2-900); border-radius: 999px;">Download brochure</a>
+        <a href="{{ waHref }}" class="btn" style="text-decoration: none; background: transparent; color: var(--color-accent-2-100); border: 2px solid color-mix(in srgb, var(--color-accent-2-100) 55%, transparent); border-radius: 999px;" style-hover="border-color: var(--color-accent-2-100);">Talk to an advisor</a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="padding: 24px 0 96px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+      <div>
+        <span style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 22px;">Peppy Woods</span>
+        <p style="font-size: 14px; line-height: 1.65; margin: 12px 0 0; max-width: 30ch; color: color-mix(in srgb, var(--color-text) 70%, transparent);">A managed plantation by Soil Systems, near Guthigar, Sullia — on the doorstep of Coorg.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px;">
+        <span style="font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent);">Explore</span>
+        <a href="#about" style="text-decoration: none;">About</a>
+        <a href="#invest" style="text-decoration: none;">Why invest</a>
+        <a href="#gallery" style="text-decoration: none;">Gallery</a>
+        <a href="#faq" style="text-decoration: none;">FAQ</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px;">
+        <span style="font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent);">Contact</span>
+        <a href="{{ waHref }}" style="text-decoration: none;">WhatsApp us</a>
+        <a href="tel:+919876543210" style="text-decoration: none;">+91 98765 43210</a>
+        <a href="mailto:hello@peppywoods.in" style="text-decoration: none;">hello@peppywoods.in</a>
+      </div>
+    </div>
+    <p style="font-size: 13px; margin: 40px 0 0; color: color-mix(in srgb, var(--color-text) 55%, transparent);">© 2026 Peppy Woods · Soil Systems &nbsp;·&nbsp; <a href="#" style="color: inherit;">Privacy policy</a></p>
+  </footer>
+</div>
+
+<a href="{{ waHref }}" aria-label="Chat on WhatsApp" style="position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 58px; height: 58px; border-radius: 50%; background: var(--color-accent-2-700); color: var(--color-accent-2-100); display: grid; place-content: center; box-shadow: var(--shadow-lg); text-decoration: none; transition: transform .25s ease;" style-hover="transform: scale(1.08); background: var(--color-accent-2-800);">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+</a>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;pricePerAcre&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;₹37 Lakhs&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Offer&quot;},&quot;showScarcity&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Offer&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;919876543210&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const wa = String(this.props.whatsappNumber ?? '919876543210').replace(/\D/g, '');
+    const mark = (arr) => arr.map((x, i) => ({ ...x, notLast: i < arr.length - 1 }));
+    return {
+      price: this.props.pricePerAcre ?? '₹37 Lakhs',
+      showScarcity: this.props.showScarcity ?? true,
+      waHref: 'https://wa.me/' + wa + '?text=' + encodeURIComponent("Hi! I'd like to know more about Peppy Woods."),
+      reasons: [
+        { title: 'Land appreciation', body: 'Titled estate land in the Western Ghats corridor, where acreage rarely comes to market.', icon: 'M22 7 13.5 15.5 8.5 10.5 2 17M16 7h6v6' },
+        { title: 'Premium timber value', body: '600+ timber trees per acre maturing into a long-horizon asset on your own land.', icon: 'M12 22v-7m0 0 4-4m-4 4-4-4m4-11 5 7h-3l4 6H6l4-6H7z' },
+        { title: 'Recurring pepper income', body: 'Black pepper vines on the timber begin yielding early and return every season.', icon: 'M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10ZM2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12' },
+        { title: 'Coffee harvest', body: 'Shade-grown coffee under the canopy adds a second annual crop to the same acre.', icon: 'M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Zm4-6v2m4-2v2' },
+        { title: 'Professional management', body: 'Soil Systems runs the plantation end to end — you review, they grow.', icon: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m7-14a4 4 0 1 0 0 .01M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75' },
+        { title: 'Near Coorg lifestyle', body: 'Estate country, waterfall drives and hill towns — Coorg living without Coorg prices.', icon: 'M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Zm-5 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' },
+        { title: 'Cool Ghats climate', body: 'Misty mornings and gentle summers at Western Ghats elevation, year round.', icon: 'M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z' },
+        { title: 'Resort access', body: 'La Cavana Resort is 40 minutes away — ownership with a holiday built in.', icon: 'M3 21h18M5 21V7l8-4v18m6 0V11l-6-4' },
+      ],
+      steps: mark([
+        { n: '1', title: 'Purchase', body: 'Acre plots, clear title, registered in your name.' },
+        { n: '2', title: 'Managed plantation', body: 'The team plants and tends coffee, pepper and timber from day one.' },
+        { n: '3', title: 'Timber growth', body: 'Trees compound quietly in the background for decades.' },
+        { n: '4', title: 'Pepper cultivation', body: 'Vines climb the timber and start producing within a few seasons.' },
+        { n: '5', title: 'Coffee harvest', body: 'Annual shade-grown harvests bring recurring income.' },
+        { n: '6', title: 'Long-term appreciation', body: 'Land, timber and yield all grow on separate clocks.' },
+        { n: '7', title: 'Legacy asset', body: 'An estate your children inherit — not a statement they file.' },
+      ]),
+      places: [
+        { name: 'Guthigar', dist: 'at the gate' },
+        { name: 'Sullia town', dist: '~30 min' },
+        { name: 'La Cavana Resort', dist: '~40 min' },
+        { name: 'Coorg (Madikeri)', dist: '~90 min' },
+        { name: 'Mangaluru airport', dist: '~2.5 hrs' },
+      ],
+      shots: [
+        { id: 'g-villa', ph: 'Luxury wooden villa', ar: '3 / 4' },
+        { id: 'g-coffee', ph: 'Coffee plantation rows', ar: '4 / 3' },
+        { id: 'g-pepper', ph: 'Black pepper vines', ar: '3 / 4' },
+        { id: 'g-mist', ph: 'Morning mist over the hills', ar: '4 / 3' },
+        { id: 'g-timber', ph: 'Timber canopy', ar: '4 / 5' },
+        { id: 'g-sunrise', ph: 'Sunrise from the ridge', ar: '4 / 3' },
+        { id: 'g-family', ph: 'Family walking the estate', ar: '3 / 4' },
+        { id: 'g-drone', ph: "Bird's-eye plantation view", ar: '4 / 3' },
+      ],
+      flow: mark([
+        { label: 'Owner' }, { label: 'Soil Systems' }, { label: 'Plantation team' }, { label: 'Harvest' }, { label: 'Returns' },
+      ]),
+      moments: [
+        'Morning coffee from your own trees',
+        'Nature walks under the timber canopy',
+        'Family weekends in the hills',
+        'Campfire evenings and star-thick skies',
+        'Birdsong, wildlife and waterfall drives',
+        'Mountain views that never repeat',
+      ],
+      quotes: [
+        { id: 'q1', text: 'We came for the investment maths and stayed for the mist. Our daughters now argue over whose acre it is.', name: 'Arjun & Meera Rao', role: 'Owners since launch · Bengaluru' },
+        { id: 'q2', text: 'I wanted farmland without becoming a farmer. The team sends updates; I send visitors.', name: 'Kavitha Shenoy', role: 'Owner, 2 acres · Mangaluru' },
+        { id: 'q3', text: 'The pepper paid before I expected, the timber is for my son. Land you can walk beats numbers on a screen.', name: 'Vikram Nair', role: 'Owner · Dubai NRI' },
+      ],
+      faqs: [
+        { q: 'Why a managed plantation?', a: 'You get the returns and the lifestyle of estate ownership without the operations. Soil Systems handles soil, planting, labour and harvest under a management agreement — you own the land outright.' },
+        { q: 'What returns can I expect?', a: 'Three layers on different clocks: recurring pepper and coffee income from early seasons, timber value maturing over decades, and land appreciation throughout. We walk you through estate-specific projections on a site visit.' },
+        { q: 'How does ownership work?', a: 'Each plot is registered in your name with clear, marketable title. You can hold, gift, or sell — it is your land in every legal sense.' },
+        { q: 'Who maintains the plantation?', a: 'A resident plantation team under Soil Systems manages irrigation, pruning, pest care and estate upkeep year round, with periodic owner updates.' },
+        { q: 'How is coffee harvested and sold?', a: 'The team harvests shade-grown coffee each season and manages processing and sale; proceeds are shared per your management agreement.' },
+        { q: 'When does pepper income start?', a: 'Pepper vines typically begin meaningful yield within a few seasons of planting and continue for many years.' },
+        { q: 'What legal documentation do I get?', a: 'Sale deed, title documents, survey records and the plantation management agreement — all shared for your lawyer\'s review before you commit.' },
+        { q: 'Is financing available?', a: 'Several owners use loans against existing property or arranged financing. Talk to an advisor and we will share what has worked.' },
+      ],
+    };
+  }
+  componentDidMount() {
+    const counters = document.querySelectorAll('[data-count]');
+    const ioC = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      ioC.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 1200), ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(end * ease) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.5 });
+    counters.forEach((el) => ioC.observe(el));
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const revs = document.querySelectorAll('[data-reveal]');
+    const ioR = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'none';
+      ioR.unobserve(e.target);
+    }), { threshold: 0.12 });
+    revs.forEach((el) => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity .7s ease, transform .7s ease';
+      ioR.observe(el);
+    });
+  }
+}
+</script>
+</body>
+</html>
