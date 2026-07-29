@@ -80,6 +80,7 @@ export default function Home() {
         <nav className={menuOpen ? "nav-open" : ""} aria-label="Main navigation">
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#invest" onClick={() => setMenuOpen(false)}>Why invest</a>
+          <a href="#location" onClick={() => setMenuOpen(false)}>Location</a>
           <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
           <a href="#visit" className="nav-cta" onClick={() => setMenuOpen(false)}>Site visit</a>
@@ -90,7 +91,7 @@ export default function Home() {
         <img className="hero-image" src="/images/peppy-woods-hero.png" alt="Misty green plantation hills at sunrise" fetchPriority="high" />
         <div className="hero-shade" />
         <div className="hero-copy">
-          <p className="eyebrow light">Near Guthigar, Sullia · On Coorg&apos;s doorstep</p>
+          <p className="eyebrow light hero-kicker">On Coorg&apos;s doorstep</p>
           <h1>Escape the city.<br />Own the hills.<br /><em>Build a legacy.</em></h1>
           <p className="hero-intro">A professionally managed coffee, pepper and timber plantation in the Western Ghats—for people who want their investment to grow from the soil.</p>
           <div className="hero-actions">
@@ -146,6 +147,25 @@ export default function Home() {
           {journey.map(([title, text], index) => (
             <article key={title}><span>{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></article>
           ))}
+        </div>
+      </section>
+
+      <section className="location section" id="location">
+        <div className="location-copy">
+          <p className="eyebrow">Location</p>
+          <h2>Estate country.<br />Coorg next door.</h2>
+          <p className="location-address">Near Guthigar, Sullia</p>
+          <p>Peppy Woods sits in the green Western Ghats corridor near Guthigar, within the Sullia estate region—close to the Coorg lifestyle without carrying Coorg prices.</p>
+        </div>
+        <div className="location-card">
+          <p className="map-label">Western Ghats <span>Karnataka</span></p>
+          <div className="contours" aria-hidden="true"><i /><i /><i /><i /><i /><b>PW</b></div>
+          <div className="place-list">
+            <div><span>Peppy Woods</span><strong>Near Guthigar</strong></div>
+            <div><span>Estate region</span><strong>Sullia</strong></div>
+            <div><span>Coorg lifestyle</span><strong>On the doorstep</strong></div>
+            <div><span>La Cavana Resort</span><strong>40 minutes</strong></div>
+          </div>
         </div>
       </section>
 
@@ -256,7 +276,7 @@ export default function Home() {
           <a className="brand footer-brand" href="#top"><span className="brand-mark">PW</span><span><strong>Peppy Woods</strong><small>Managed estates</small></span></a>
           <p>A managed plantation by Soil Systems, near Guthigar, Sullia—on the doorstep of Coorg.</p>
         </div>
-        <div className="footer-links"><strong>Explore</strong><a href="#about">About</a><a href="#invest">Why invest</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#visit">Contact</a></div>
+        <div className="footer-links"><strong>Explore</strong><a href="#about">About</a><a href="#invest">Why invest</a><a href="#location">Location</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#visit">Contact</a></div>
         <div className="footer-links"><strong>Contact</strong><a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">WhatsApp us</a><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:hello@peppywoods.in">hello@peppywoods.in</a></div>
         <small>© 2026 Peppy Woods · Soil Systems <span>·</span> <a href="#">Privacy policy</a> <span>·</span> *Pricing and crop timelines are indicative and subject to documentation, agricultural conditions and availability.</small>
       </footer>

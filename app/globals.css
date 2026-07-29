@@ -60,6 +60,20 @@ nav a:hover::after { right:0; }
 .hero-copy { position:absolute; left:clamp(24px, 8vw, 132px); top:52%; transform:translateY(-43%); max-width:720px; }
 .eyebrow { margin:0 0 24px; color:var(--moss); font-size:11px; line-height:1.2; letter-spacing:.2em; text-transform:uppercase; font-weight:700; }
 .eyebrow.light { color:#d9d6c8; }
+.hero-kicker {
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  width:max-content;
+  padding:10px 15px;
+  border:1px solid rgba(240,201,130,.46);
+  border-radius:999px;
+  color:#f2ce8d !important;
+  background:rgba(5,31,25,.48);
+  backdrop-filter:blur(7px);
+  letter-spacing:.24em;
+}
+.hero-kicker::before { content:""; width:24px; height:1px; background:var(--gold); }
 h1,h2 { font-family:var(--font-display), serif; font-weight:400; letter-spacing:-.035em; }
 h1 { font-size:clamp(62px, 7.3vw, 112px); line-height:.83; margin:0; }
 h1 em { color:#e2bf82; font-weight:400; }
@@ -121,6 +135,7 @@ h2 { font-size:clamp(52px, 6vw, 82px); line-height:.92; margin:0; }
 .process-list p { color:rgba(255,255,255,.6); }
 .location { display:grid; grid-template-columns:.83fr 1.17fr; gap:9%; align-items:center; }
 .location-copy h2 { margin-bottom:36px; }
+.location-address { display:inline-block; margin:0 0 22px; padding:11px 16px; border-left:3px solid var(--gold); background:var(--cream); color:var(--pine); font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
 .location-card { background:#e6e3d7; padding:28px; min-height:590px; position:relative; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; }
 .map-label { display:flex; justify-content:space-between; margin:0; font-size:11px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; position:relative; z-index:2; }
 .map-label span { color:var(--muted); }
@@ -368,6 +383,7 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   h1 { font-size:58px; }
   .hero-intro { font-size:14px; max-width:88%; }
   .hero-actions { align-items:flex-start; flex-direction:column; gap:18px; }
+  .hero-kicker { max-width:100%; padding:9px 13px; font-size:9px; letter-spacing:.18em; }
   .section { padding-top:88px; padding-bottom:88px; }
   .section-wide { margin-left:0; margin-right:0; }
   .feature-image { min-height:620px; }
