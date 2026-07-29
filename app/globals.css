@@ -144,12 +144,33 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
 .investment-heading { display:grid; grid-template-columns:1.1fr .9fr; gap:28px 9%; align-items:end; margin-bottom:64px; }
 .investment-heading .eyebrow { grid-column:1/-1; }
 .investment-heading > p:last-child { margin:0 0 3px; color:var(--muted); font-size:14px; line-height:1.8; }
-.investment-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
-.investment-card { min-height:300px; padding:28px 24px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; flex-direction:column; }
-.investment-card > span { color:var(--gold); font-size:10px; letter-spacing:.12em; }
-.investment-card h3 { font-family:var(--font-display),serif; font-size:27px; line-height:1.05; font-weight:500; margin:auto 0 16px; }
-.investment-card p { color:var(--muted); font-size:12px; line-height:1.75; margin:0; }
-.investment-card:hover { background:var(--cream); }
+.investment-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px 12px; }
+.investment-card {
+  min-height:274px;
+  padding:44px 30px 38px;
+  position:relative;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  clip-path:polygon(25% 0,75% 0,100% 18%,100% 82%,75% 100%,25% 100%,0 82%,0 18%);
+  background:color-mix(in srgb,var(--pine) 28%,transparent);
+  transition:transform .3s ease;
+}
+.investment-card::before {
+  content:"";
+  position:absolute;
+  inset:2px;
+  z-index:-1;
+  clip-path:inherit;
+  background:var(--paper);
+  transition:background .3s ease;
+}
+.investment-card > span { color:var(--gold); font-size:10px; letter-spacing:.12em; margin-bottom:22px; }
+.investment-card h3 { font-family:var(--font-display),serif; font-size:27px; line-height:1.05; font-weight:500; margin:0 0 14px; }
+.investment-card p { color:var(--muted); font-size:11.5px; line-height:1.65; margin:0; }
+.investment-card:hover { transform:translateY(-6px); }
+.investment-card:hover::before { background:var(--cream); }
 
 .journey { max-width:none; padding-left:max(24px,calc((100vw - 1084px)/2)); padding-right:max(24px,calc((100vw - 1084px)/2)); background:var(--pine-deep); color:white; display:grid; grid-template-columns:.8fr 1.2fr; gap:10%; }
 .journey-list article { display:grid; grid-template-columns:54px 1fr; gap:22px; padding:22px 0; border-top:1px solid rgba(255,255,255,.15); }
@@ -179,9 +200,8 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
 .moment-list { margin-top:34px; }
 .moment-list p { display:flex; gap:15px; margin:0; padding:12px 0; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; }
 .moment-list span { color:var(--gold); font-size:22px; line-height:.5; }
-.life-images { display:grid; grid-template-columns:1.2fr .8fr; gap:14px; align-items:end; }
-.life-images img { width:100%; height:570px; object-fit:cover; }
-.life-images img:last-child { height:410px; }
+.life-images { display:block; }
+.life-images img { width:100%; height:620px; object-fit:cover; object-position:center 70%; border-radius:220px 220px 18px 18px; }
 
 .resort { display:grid; grid-template-columns:1fr 1fr; background:var(--cream); }
 .resort-image { min-height:590px; }
@@ -238,7 +258,7 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   .investment-heading .eyebrow { grid-column:auto; }
   .investment-grid { grid-template-columns:repeat(2,1fr); }
   .gallery-grid { grid-template-columns:repeat(2,1fr); }
-  .life-images img { height:500px; }
+  .life-images img { height:520px; }
   .story-grid { grid-template-columns:1fr; }
   .story-grid blockquote { min-height:300px; }
   .site-footer { grid-template-columns:1.2fr .8fr; }
@@ -263,8 +283,7 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   .gallery-grid { display:flex; overflow:auto; scroll-snap-type:x mandatory; padding:0 24px 14px; margin:0 -24px; }
   .gallery-grid figure,.gallery-grid figure.gallery-wide,.gallery-grid figure.gallery-tall { min-width:82vw; height:500px; scroll-snap-align:center; }
   .management { margin:0; padding:72px 24px; }
-  .life-images { grid-template-columns:1fr; }
-  .life-images img,.life-images img:last-child { height:430px; }
+  .life-images img { height:480px; border-radius:180px 180px 12px 12px; }
   .resort { margin:0; }
   .resort-image { min-height:460px; }
   .story-grid blockquote { min-height:340px; }

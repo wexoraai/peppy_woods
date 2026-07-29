@@ -24,14 +24,11 @@ const journey = [
 ];
 
 const gallery = [
-  ["Morning mist", "/images/peppy-woods-hero.png", "gallery-wide", "center 38%"],
-  ["Coffee under timber", "/images/estate-pavilion.png", "gallery-tall", "18% center"],
-  ["The plantation road", "/images/peppy-woods-hero.png", "", "44% center"],
-  ["Life beneath the canopy", "/images/estate-pavilion.png", "", "70% center"],
-  ["Western Ghats sunrise", "/images/peppy-woods-hero.png", "gallery-tall", "78% center"],
-  ["Estate weekends", "/images/estate-pavilion.png", "gallery-wide", "92% center"],
-  ["Hills that feel like home", "/images/peppy-woods-hero.png", "", "12% center"],
-  ["Space to slow down", "/images/estate-pavilion.png", "", "45% center"],
+  ["Coffee at sunrise", "/gallery/coffee-sunrise.png", "gallery-wide", "center center"],
+  ["Coffee cherries", "/gallery/coffee-cherries.png", "", "center center"],
+  ["The timber lane", "/gallery/timber-lane.png", "gallery-tall", "center center"],
+  ["Western Ghats layers", "/gallery/ghats-coffee.png", "gallery-tall", "center center"],
+  ["Pepper on the vine", "/gallery/pepper-vines.png", "gallery-wide", "center center"],
 ];
 
 const moments = [
@@ -150,7 +147,7 @@ export default function Home() {
       <section className="gallery-section section" id="gallery">
         <div className="gallery-heading">
           <div><p className="eyebrow">Gallery</p><h2>Life at the plantation.</h2></div>
-          <p>Temporary estate imagery is shown here. Your authentic Peppy Woods photographs can replace each frame without changing the layout.</p>
+          <p>Coffee slopes, timber shade, pepper vines and the quiet tracks that connect one part of the estate to another.</p>
         </div>
         <div className="gallery-grid">
           {gallery.map(([title, src, className, position]) => (
@@ -182,13 +179,12 @@ export default function Home() {
           <div className="moment-list">{moments.map((moment) => <p key={moment}><span>·</span>{moment}</p>)}</div>
         </div>
         <div className="life-images">
-          <img src="/images/peppy-woods-hero.png" alt="Sunrise over the Peppy Woods hills" loading="lazy" />
-          <img src="/images/estate-pavilion.png" alt="A quiet estate pavilion beneath the canopy" loading="lazy" />
+          <img src="/gallery/campfire.png" alt="A campfire evening beneath the trees" loading="lazy" />
         </div>
       </section>
 
       <section className="resort section-wide">
-        <div className="resort-image"><img src="/images/estate-pavilion.png" alt="A refined retreat among the plantation trees" loading="lazy" /></div>
+        <div className="resort-image"><img src="/gallery/estate-villa.png" alt="A refined villa overlooking coffee-covered hills" loading="lazy" /></div>
         <div className="resort-copy">
           <span>40 minutes away</span>
           <p className="eyebrow">La Cavana Resort, down the road</p>
