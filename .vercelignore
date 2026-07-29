@@ -1,0 +1,13 @@
+.git
+.openai
+.pnpm-store
+.next
+dist
+outputs
+work
+Peppy Woods.dc.html
+_ds
+support.js
+image-slot.js
+.image-slots.state.json
+.thumbnail

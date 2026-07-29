@@ -98,7 +98,11 @@ export default function Home() {
             <a className="text-link light" href="#about">Explore Peppy Woods <span>↘</span></a>
           </div>
         </div>
-        <div className="hero-note"><span>₹</span><p>Launch pricing<br />₹37 lakhs per acre*</p></div>
+        <div className="hero-note" aria-label="Launch pricing: 37 lakhs per acre">
+          <span>Launch pricing</span>
+          <strong><b>₹37</b> lakhs</strong>
+          <small>per acre*</small>
+        </div>
       </section>
 
       <section className="intro section" id="about">
@@ -217,7 +221,11 @@ export default function Home() {
 
       <section className="visit section-wide" id="visit">
         <div className="visit-copy">
-          <p className="eyebrow light">Launch pricing · ₹37 lakhs per acre</p>
+          <div className="visit-price" aria-label="Launch pricing: 37 lakhs per acre">
+            <span>Launch pricing</span>
+            <strong><b>₹37</b> lakhs</strong>
+            <small>per acre*</small>
+          </div>
           <h2>Invest in nature.<br />Grow with time.<br />Leave a legacy.</h2>
           <p>Come walk the land—the mist does the convincing.</p>
           <div className="contact-actions">

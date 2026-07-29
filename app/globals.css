@@ -71,9 +71,21 @@ h1 em { color:#e2bf82; font-weight:400; }
 .text-link { background:none; border:0; padding:8px 0; cursor:pointer; font-size:11px; text-transform:uppercase; letter-spacing:.1em; border-bottom:1px solid currentColor; }
 .text-link span { margin-left:14px; }
 .text-link.light { color:white; }
-.hero-note { position:absolute; right:clamp(24px, 5vw, 74px); bottom:48px; display:flex; gap:15px; align-items:flex-start; }
-.hero-note span { width:34px; height:34px; border:1px solid rgba(255,255,255,.5); border-radius:50%; display:grid; place-items:center; font-size:10px; }
-.hero-note p { margin:0; font-size:11px; line-height:1.6; letter-spacing:.06em; text-transform:uppercase; }
+.hero-note {
+  position:absolute;
+  right:clamp(24px, 5vw, 74px);
+  bottom:42px;
+  min-width:280px;
+  padding:20px 24px 18px;
+  border-left:3px solid var(--gold);
+  background:rgba(7,35,29,.78);
+  backdrop-filter:blur(8px);
+}
+.hero-note span,.hero-note small { display:block; text-transform:uppercase; letter-spacing:.14em; }
+.hero-note span { color:#e9dfcb; font-size:9px; font-weight:700; }
+.hero-note strong { display:flex; align-items:baseline; gap:9px; margin:4px 0 1px; font-family:var(--font-display),serif; font-size:26px; line-height:1; font-weight:500; }
+.hero-note strong b { color:#f0c982; font-size:54px; font-weight:500; letter-spacing:-.04em; }
+.hero-note small { color:rgba(255,255,255,.68); font-size:9px; }
 
 .section { max-width:1180px; margin:0 auto; padding:clamp(92px, 11vw, 164px) clamp(24px, 4vw, 48px); }
 .section-wide { margin:0 clamp(18px, 3.2vw, 52px); }
@@ -115,10 +127,16 @@ h2 { font-size:clamp(52px, 6vw, 82px); line-height:.92; margin:0; }
 .place-list div { display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line); font-size:12px; }
 .place-list div:last-child { border:0; }
 .place-list strong { font-weight:600; color:var(--moss); }
-.visit { background:var(--pine); color:white; padding:clamp(58px, 7vw, 100px); display:grid; grid-template-columns:.9fr 1.1fr; gap:10%; align-items:start; }
-.visit-copy h2 { font-size:clamp(56px, 5.6vw, 84px); }
+.visit { background:var(--pine); color:white; padding:clamp(52px, 6vw, 82px); display:grid; grid-template-columns:.95fr 1.05fr; gap:8%; align-items:center; }
+.visit-copy h2 { max-width:610px; font-size:clamp(48px, 4.8vw, 72px); }
 .visit-copy > p:last-child { max-width:430px; color:rgba(255,255,255,.63); font-size:14px; line-height:1.8; }
-.visit-form-wrap { min-height:420px; }
+.visit-price { margin-bottom:26px; padding:0 0 18px 20px; border-left:3px solid var(--gold); }
+.visit-price span,.visit-price small { display:block; text-transform:uppercase; letter-spacing:.15em; }
+.visit-price span { color:#d9d6c8; font-size:10px; font-weight:700; }
+.visit-price strong { display:flex; align-items:baseline; gap:10px; margin:3px 0; font-family:var(--font-display),serif; font-size:34px; line-height:1; font-weight:500; }
+.visit-price strong b { color:#efc67d; font-size:clamp(68px,7vw,104px); font-weight:500; letter-spacing:-.055em; }
+.visit-price small { color:rgba(255,255,255,.62); font-size:9px; }
+.visit-form-wrap { min-height:0; }
 form { display:flex; flex-direction:column; gap:20px; }
 form label { display:flex; flex-direction:column; gap:8px; }
 form label > span { color:rgba(255,255,255,.65); font-size:10px; letter-spacing:.13em; text-transform:uppercase; }
@@ -180,13 +198,27 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
 
 .gallery-heading { display:grid; grid-template-columns:1fr .7fr; gap:9%; align-items:end; margin-bottom:48px; }
 .gallery-heading > p { margin:0 0 4px; color:var(--muted); line-height:1.8; font-size:13px; }
-.gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:260px; gap:14px; }
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-areas:
+    "sunrise sunrise cherries timber"
+    "ghats pepper pepper timber"
+    "ghats canopy canopy canopy";
+  grid-template-rows:240px 300px 240px;
+  gap:14px;
+}
 .gallery-grid figure { position:relative; margin:0; overflow:hidden; background:var(--cream); }
-.gallery-grid figure.gallery-wide { grid-column:span 2; }
-.gallery-grid figure.gallery-tall { grid-row:span 2; }
+.gallery-grid figure:nth-child(1) { grid-area:sunrise; }
+.gallery-grid figure:nth-child(2) { grid-area:cherries; }
+.gallery-grid figure:nth-child(3) { grid-area:timber; }
+.gallery-grid figure:nth-child(4) { grid-area:ghats; }
+.gallery-grid figure:nth-child(5) { grid-area:pepper; }
+.gallery-grid figure:nth-child(6) { grid-area:canopy; }
 .gallery-grid img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
 .gallery-grid figure:hover img { transform:scale(1.03); }
-.gallery-grid figcaption { position:absolute; left:16px; bottom:14px; padding:8px 12px; background:rgba(11,43,36,.84); color:white; font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+.gallery-grid figure::after { content:""; position:absolute; inset:auto 0 0; height:34%; background:linear-gradient(transparent,rgba(5,27,22,.68)); pointer-events:none; }
+.gallery-grid figcaption { position:absolute; z-index:1; left:18px; bottom:16px; color:white; font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
 
 .management { background:var(--pine); color:white; padding:clamp(58px,7vw,100px); display:grid; grid-template-columns:1fr 1fr; gap:9%; }
 .management-copy h2 { font-size:clamp(50px,5vw,72px); }
@@ -206,17 +238,17 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
 .resort { display:grid; grid-template-columns:1fr 1fr; background:var(--cream); }
 .resort-image { min-height:590px; }
 .resort-image img { width:100%; height:100%; object-fit:cover; object-position:75% center; }
-.resort-collage { position:relative; overflow:hidden; background:#d9d5c9; }
-.resort-collage .resort-cabin { position:absolute; inset:0 0 auto 0; width:100%; height:73%; object-fit:cover; object-position:center; }
+.resort-collage { position:relative; overflow:hidden; background:#263e34; }
+.resort-collage .resort-cabin { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
 .resort-collage .resort-hillside {
   position:absolute;
-  right:28px;
-  bottom:24px;
-  width:min(38%,287px);
+  right:26px;
+  bottom:26px;
+  width:min(36%,287px);
   height:auto;
   max-height:510px;
   object-fit:contain;
-  border:8px solid var(--paper);
+  border:7px solid var(--paper);
   box-shadow:0 20px 45px rgba(11,43,36,.22);
 }
 .resort-copy { padding:clamp(48px,7vw,100px); align-self:center; }
@@ -258,11 +290,12 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   nav { display:none; position:absolute; left:0; right:0; top:0; padding:100px 28px 34px; background:var(--pine-deep); flex-direction:column; align-items:stretch; }
   nav.nav-open { display:flex; }
   .nav-cta { text-align:center; }
-  .hero { min-height:700px; }
+  .hero { min-height:820px; }
   .hero-copy { top:48%; transform:translateY(-40%); }
   .hero-shade { background:linear-gradient(90deg,rgba(4,25,20,.8),rgba(4,25,20,.18)),linear-gradient(0deg,rgba(4,25,20,.5),transparent 55%); }
-  .hero-note { left:24px; right:auto; }
-  .intro,.benefits,.process,.location,.visit,.journey,.management,.life,.resort,.faq { grid-template-columns:1fr; gap:58px; }
+  .hero-note { left:24px; right:auto; min-width:250px; }
+  .intro,.benefits,.process,.location,.journey,.management,.life,.resort,.faq { grid-template-columns:1fr; gap:58px; }
+  .visit { grid-template-columns:1fr; gap:42px; }
   .intro-copy { max-width:650px; }
   .facts { grid-template-columns:1fr; gap:34px; }
   .fact { justify-content:space-between; }
@@ -270,7 +303,16 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   .investment-heading { grid-template-columns:1fr; }
   .investment-heading .eyebrow { grid-column:auto; }
   .investment-grid { grid-template-columns:repeat(2,1fr); }
-  .gallery-grid { grid-template-columns:repeat(2,1fr); }
+  .gallery-grid {
+    grid-template-columns:repeat(2,1fr);
+    grid-template-areas:
+      "sunrise sunrise"
+      "cherries timber"
+      "ghats timber"
+      "pepper pepper"
+      "canopy canopy";
+    grid-template-rows:260px 260px 260px 280px 260px;
+  }
   .life-images img { height:520px; }
   .story-grid { grid-template-columns:1fr; }
   .story-grid blockquote { min-height:300px; }
@@ -299,12 +341,15 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   .life-images img { height:480px; border-radius:180px 180px 12px 12px; }
   .resort { margin:0; }
   .resort-image { min-height:460px; }
-  .resort-collage .resort-cabin { height:68%; }
+  .resort-collage .resort-cabin { height:100%; }
   .resort-collage .resort-hillside { right:18px; bottom:18px; width:min(44%,287px); border-width:5px; }
   .story-grid blockquote { min-height:340px; }
   .faq-list summary { font-size:21px; }
   .contact-actions { align-items:flex-start; flex-direction:column; gap:14px; }
-  .visit { padding:72px 24px; }
+  .visit { padding:58px 24px; gap:34px; }
+  .visit-copy h2 { font-size:48px; line-height:.9; }
+  .visit-price { margin-bottom:22px; }
+  .visit-price strong b { font-size:76px; }
   .form-row { grid-template-columns:1fr; }
   .map-label span { display:none; }
   footer { margin:0 24px; grid-template-columns:1fr; }
