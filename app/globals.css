@@ -185,7 +185,7 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
   z-index:-1;
   clip-path:inherit;
   background:
-    linear-gradient(135deg,rgba(251,250,246,.97) 5%,rgba(244,240,231,.73) 100%),
+    linear-gradient(100deg,rgba(251,250,246,.82) 0%,rgba(244,240,231,.48) 68%,rgba(244,240,231,.2) 100%),
     var(--tile-image) center / cover no-repeat;
   transition:filter .3s ease;
 }
@@ -197,9 +197,9 @@ footer > small { grid-column:1/-1; border-top:1px solid var(--line); padding-top
 .investment-card:nth-child(6) { --tile-image:url("/gallery/coffee-sunrise.png"); }
 .investment-card:nth-child(7) { --tile-image:url("/images/peppy-woods-hero.png"); }
 .investment-card:nth-child(8) { --tile-image:url("/gallery/la-cavana-cabin.png"); }
-.investment-card > span { color:var(--gold); font-size:10px; letter-spacing:.12em; margin-bottom:22px; }
-.investment-card h3 { color:var(--pine-deep); font-family:var(--font-display),serif; font-size:28px; line-height:1.05; font-weight:600; margin:0 0 14px; }
-.investment-card p { color:#53635d; font-size:11.5px; line-height:1.65; margin:0; }
+.investment-card > span { color:#b67f33; font-size:10px; font-weight:700; letter-spacing:.12em; margin-bottom:22px; text-shadow:0 1px 10px rgba(251,250,246,.95); }
+.investment-card h3 { color:var(--pine-deep); font-family:var(--font-display),serif; font-size:28px; line-height:1.05; font-weight:600; margin:0 0 14px; text-shadow:0 1px 12px rgba(251,250,246,.98); }
+.investment-card p { color:#294239; font-size:11.5px; font-weight:500; line-height:1.65; margin:0; text-shadow:0 1px 10px rgba(251,250,246,.98); }
 .investment-card:hover { transform:translateY(-7px); box-shadow:0 24px 50px rgba(20,59,49,.13); }
 .investment-card:hover::before { filter:saturate(1.15) contrast(1.03); }
 
