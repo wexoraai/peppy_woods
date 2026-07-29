@@ -98,8 +98,8 @@ export default function Home() {
             <a className="text-link light" href="#about">Explore Peppy Woods <span>↘</span></a>
           </div>
         </div>
-        <div className="hero-note" aria-label="Launch pricing: 37 lakhs per acre">
-          <span>Launch pricing</span>
+        <div className="hero-note" aria-label="Original price 1.2 crore. Launch price 37 lakhs per acre">
+          <div className="price-kicker"><del>₹1.2 crore</del><span>Launch price</span></div>
           <strong><b>₹37</b> lakhs</strong>
           <small>per acre*</small>
         </div>
@@ -167,7 +167,7 @@ export default function Home() {
       <section className="management section-wide">
         <div className="management-copy">
           <p className="eyebrow light">Plantation management</p>
-          <h2>You own the land.<br />Professionals grow it.</h2>
+          <h2>You own the land. Professionals grow it.</h2>
           <p>Soil Systems and an experienced plantation team manage every operation—soil health, irrigation, planting, pruning and harvest—so returns arrive without your weekends going with them.</p>
         </div>
         <div className="management-flow" aria-label="Plantation management flow">
@@ -221,8 +221,8 @@ export default function Home() {
 
       <section className="visit section-wide" id="visit">
         <div className="visit-copy">
-          <div className="visit-price" aria-label="Launch pricing: 37 lakhs per acre">
-            <span>Launch pricing</span>
+          <div className="visit-price" aria-label="Original price 1.2 crore. Launch price 37 lakhs per acre">
+            <div className="price-kicker"><del>₹1.2 crore</del><span>Launch price</span></div>
             <strong><b>₹37</b> lakhs</strong>
             <small>per acre*</small>
           </div>
