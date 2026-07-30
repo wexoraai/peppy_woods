@@ -94,11 +94,11 @@ export default function Home() {
             <a className="text-link light" href="#about">Explore Peppy Woods <span>↘</span></a>
           </div>
         </div>
-        <div className="hero-note" aria-label="Pre-booking launch offer: 37 lakh per acre for 3-acre bookings">
+        <div className="hero-note" aria-label="Pre-booking launch offer: 37 lakh per acre for starting 3-acre bookings">
           <div className="price-kicker"><span>Pre-booking launch offer</span></div>
           <strong><b>₹37</b> lakh</strong>
-          <small>per acre* · for 3-acre bookings</small>
-          <p className="price-context">Standard starting price: ₹80 lakh per acre. Limited launch inventory.</p>
+          <small>per acre* · for starting 3-acre bookings</small>
+          <p className="price-context">Actual price: ₹80 lakh per acre. Limited launch inventory.</p>
         </div>
       </section>
 
@@ -228,11 +228,11 @@ export default function Home() {
 
       <section className="visit section-wide" id="visit">
         <div className="visit-copy">
-          <div className="visit-price" aria-label="Pre-booking launch offer: 37 lakh per acre for 3-acre bookings">
+          <div className="visit-price" aria-label="Pre-booking launch offer: 37 lakh per acre for starting 3-acre bookings">
             <div className="price-kicker"><span>Pre-booking launch offer</span></div>
             <strong><b>₹37</b> lakh</strong>
-            <small>per acre* · for 3-acre bookings</small>
-            <p className="price-context">Standard starting price: ₹80 lakh per acre. Limited inventory is available during the launch phase.</p>
+            <small>per acre* · for starting 3-acre bookings</small>
+            <p className="price-context">Actual price: ₹80 lakh per acre. Limited launch inventory.</p>
           </div>
           <h2>Invest in nature.<br />Grow with time.<br />Leave a legacy.</h2>
           <p>Come walk the land—the mist does the convincing.</p>
@@ -253,7 +253,7 @@ export default function Home() {
         </div>
         <div className="footer-links"><strong>Explore</strong><a href="#about">About</a><a href="#invest">Why invest</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#location">Location</a><a href="#visit">Contact</a></div>
         <div className="footer-links contact-placeholder"><strong>Contact</strong><span>Sales phone —</span><span>WhatsApp —</span><span>Email —</span></div>
-        <small>© 2026 Peppy Woods · Soil Systems <span>·</span> <a href="#">Privacy policy</a> <span>·</span> *₹37 lakh per acre is a limited pre-booking launch offer for 3-acre bookings. Standard starting price is ₹80 lakh per acre. Pricing, availability, crop timelines and yields are indicative and subject to documentation, legal verification, approvals, agricultural conditions and performance.</small>
+        <small>© 2026 Peppy Woods · Soil Systems <span>·</span> <a href="#">Privacy policy</a> <span>·</span> *₹37 lakh per acre is a limited pre-booking launch offer for starting 3-acre bookings. Actual price is ₹80 lakh per acre. Pricing, availability, crop timelines and yields are indicative and subject to documentation, legal verification, approvals, agricultural conditions and performance.</small>
       </footer>
     </main>
   );
