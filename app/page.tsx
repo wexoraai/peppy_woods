@@ -1,24 +1,24 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 const investments = [
-  ["Land appreciation", "Titled estate land in the Western Ghats corridor, where acreage rarely comes to market."],
-  ["Premium timber value", "600+ timber trees per acre maturing into a long-horizon asset on your own land."],
-  ["Recurring pepper income", "Black pepper vines on the timber begin yielding early and return every season."],
-  ["Coffee harvest", "Shade-grown coffee under the canopy adds a second annual crop to the same acre."],
+  ["Land appreciation", "Estate land in the Western Ghats corridor, where larger acreage opportunities rarely come to market."],
+  ["Payyani timber value", "Approximately 600+ carefully spaced Payyani (Pajanelia longifolia) timber trees per acre, subject to final field layout."],
+  ["Pepper crop potential", "Black pepper vines are planned alongside suitable host trees and develop as the plantation matures."],
+  ["Coffee crop development", "Shade-grown Robusta coffee is already planted and may reach commercial harvest around the second or third year, depending on field conditions."],
   ["Professional management", "Soil Systems runs the plantation end to end — you review, they grow."],
   ["Near Coorg lifestyle", "Estate country, waterfall drives and hill towns — Coorg living without Coorg prices."],
   ["Cool Ghats climate", "Misty mornings and gentle summers at Western Ghats elevation, year round."],
-  ["Resort access", "La Cavana Resort is 40 minutes away — ownership with a holiday built in."],
+  ["Layered plantation plan", "Land, Payyani timber, Robusta coffee and black pepper develop on different agricultural timelines."],
 ];
 
 const journey = [
-  ["Purchase", "Acre plots, clear title, registered in your name."],
-  ["Managed plantation", "The team plants and tends coffee, pepper and timber from day one."],
-  ["Timber growth", "Trees compound quietly in the background for decades."],
-  ["Pepper cultivation", "Vines climb the timber and start producing within a few seasons."],
-  ["Coffee harvest", "Annual shade-grown harvests bring recurring income."],
+  ["Purchase", "Individual plots proposed for registration in the purchaser’s name, subject to title verification, survey, applicable approvals and sale documentation."],
+  ["Managed plantation", "The team tends the existing coffee and manages planned pepper, Payyani timber and plantation operations."],
+  ["Timber growth", "Payyani timber is a long-term plantation asset that develops over decades."],
+  ["Pepper cultivation", "Vine establishment and future yield depend on host-tree development, climate, maintenance and agricultural performance."],
+  ["Coffee harvest", "Commercial Robusta coffee harvest may begin around the second or third year, depending on plant age, condition and field performance."],
   ["Long-term appreciation", "Land, timber and yield all grow on separate clocks."],
   ["Legacy asset", "An estate your children inherit — not a statement they file."],
 ];
@@ -41,31 +41,27 @@ const moments = [
   "Mountain views that never repeat",
 ];
 
-const stories = [
-  ["“We came for the investment maths and stayed for the mist. Our daughters now argue over whose acre it is.”", "Arjun & Meera Rao", "Owners since launch · Bengaluru"],
-  ["“I wanted farmland without becoming a farmer. The team sends updates; I send visitors.”", "Kavitha Shenoy", "Owner, 2 acres · Mangaluru"],
-  ["“The pepper paid before I expected, the timber is for my son. Land you can walk beats numbers on a screen.”", "Vikram Nair", "Owner · Dubai NRI"],
+const buyerConsiderations = [
+  ["Ownership pathway", "Individual plot registration is proposed subject to title verification, survey, approvals and final sale documentation."],
+  ["Professional management", "Soil Systems coordinates plantation planning, field operations and ongoing maintenance."],
+  ["Coffee and pepper potential", "Robusta coffee and black pepper are intended to develop into recurring crops as the plantation matures."],
+  ["Long-term timber value", "Payyani timber is planned as a long-horizon plantation asset."],
+  ["Near-Coorg setting", "Western Ghats estate country with access to the wider Coorg lifestyle and hill region."],
 ];
 
 const faqs = [
   ["Why a managed plantation?", "You own the land and stay connected to its progress while Soil Systems handles soil, planting, labour, irrigation, pruning, harvest and year-round estate upkeep."],
-  ["What returns can I expect?", "Peppy Woods combines crops and assets on different timelines: recurring pepper and coffee harvests, long-horizon timber value and potential land appreciation. Detailed projections are shared during the ownership discussion."],
-  ["How does ownership work?", "Each acre plot is registered in the buyer’s name, supported by the applicable title, survey and sale documentation for independent legal review."],
+  ["What returns can I expect?", "Coffee and pepper are expected to develop into recurring harvest crops as the plantation matures, while Payyani timber is a long-term asset. Actual commencement, yield and value depend on plant age, rainfall, soil conditions, maintenance, market conditions and agricultural performance."],
+  ["How does ownership work?", "Individual plots are proposed for registration in the purchaser’s name, subject to title verification, survey, applicable approvals and final sale documentation. Buyers should obtain independent legal review."],
   ["Who maintains the plantation?", "A resident plantation team working under Soil Systems manages day-to-day operations and provides periodic owner updates."],
-  ["How is coffee harvested and sold?", "The estate team manages seasonal harvesting, processing coordination and sale according to the plantation management agreement."],
-  ["When does pepper income start?", "Pepper vines typically begin producing within the first few seasons, with yield developing as the vines mature and conditions allow."],
-  ["What legal documentation do I get?", "Buyers receive the relevant sale deed, title documents, survey records and plantation management agreement for review before completion."],
+  ["How is coffee harvested and sold?", "Coffee is already planted and may begin commercial harvest around the second or third year, depending on plant age and condition. Harvesting, processing and sale arrangements will follow the final plantation management agreement."],
+  ["When does pepper income start?", "Pepper income depends on vine establishment, suitable host-tree development, climate, maintenance and crop performance. No immediate-income timeline is assured."],
+  ["What legal documentation do I get?", "Available title records, survey information, proposed sale documents and the plantation management agreement are provided for review as applicable. Completion remains subject to legal verification and required approvals."],
   ["Is financing available?", "Financing depends on the buyer and lender. The advisory team can discuss common funding routes, while every buyer should take independent financial advice."],
 ];
 
 export default function Home() {
-  const [submitted, setSubmitted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitted(true);
-  }
 
   return (
     <main>
@@ -80,9 +76,9 @@ export default function Home() {
         <nav className={menuOpen ? "nav-open" : ""} aria-label="Main navigation">
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#invest" onClick={() => setMenuOpen(false)}>Why invest</a>
-          <a href="#location" onClick={() => setMenuOpen(false)}>Location</a>
           <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
+          <a href="#location" onClick={() => setMenuOpen(false)}>Location</a>
           <a href="#visit" className="nav-cta" onClick={() => setMenuOpen(false)}>Site visit</a>
         </nav>
       </header>
@@ -91,18 +87,18 @@ export default function Home() {
         <img className="hero-image" src="/images/peppy-woods-hero.png" alt="Misty green plantation hills at sunrise" fetchPriority="high" />
         <div className="hero-shade" />
         <div className="hero-copy">
-          <p className="eyebrow light hero-kicker">On Coorg&apos;s doorstep</p>
           <h1>Escape the city.<br />Own the hills.<br /><em>Build a legacy.</em></h1>
-          <p className="hero-intro">A professionally managed coffee, pepper and timber plantation in the Western Ghats—for people who want their investment to grow from the soil.</p>
+          <p className="hero-intro">A professionally managed Robusta coffee, black pepper and Payyani timber plantation in the Western Ghats—for people who want their investment to grow from the soil.</p>
           <div className="hero-actions">
             <a className="button button-light" href="#visit">Schedule a site visit</a>
             <a className="text-link light" href="#about">Explore Peppy Woods <span>↘</span></a>
           </div>
         </div>
-        <div className="hero-note" aria-label="Original price 1.2 crore. Launch price 37 lakhs per acre">
-          <div className="price-kicker"><del>₹1.2 crore</del><span>Launch price</span></div>
-          <strong><b>₹37</b> lakhs</strong>
-          <small>per acre*</small>
+        <div className="hero-note" aria-label="Pre-booking launch offer: 37 lakh per acre for 3-acre bookings">
+          <div className="price-kicker"><span>Pre-booking launch offer</span></div>
+          <strong><b>₹37</b> lakh</strong>
+          <small>per acre* · for 3-acre bookings</small>
+          <p className="price-context">Standard starting price: ₹80 lakh per acre. Limited launch inventory.</p>
         </div>
       </section>
 
@@ -113,7 +109,7 @@ export default function Home() {
         </div>
         <div className="intro-copy">
           <p>Imagine waking to mist-covered hills, the aroma of fresh coffee and mornings that belong entirely to you. Peppy Woods is more than farmland—it is a long-term legacy investment.</p>
-          <p>You own titled estate land near Guthigar, Sullia. Soil Systems and an experienced plantation team manage the coffee, pepper, timber and daily operations while you enjoy ownership.</p>
+          <p>Individual plots are proposed for purchaser registration, subject to title verification, survey, applicable approvals and final sale documentation. Soil Systems manages the coffee, pepper, Payyani timber and daily plantation operations.</p>
         </div>
       </section>
 
@@ -147,25 +143,6 @@ export default function Home() {
           {journey.map(([title, text], index) => (
             <article key={title}><span>{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></article>
           ))}
-        </div>
-      </section>
-
-      <section className="location section" id="location">
-        <div className="location-copy">
-          <p className="eyebrow">Location</p>
-          <h2>Estate country.<br />Coorg next door.</h2>
-          <p className="location-address">Near Guthigar, Sullia</p>
-          <p>Peppy Woods sits in the green Western Ghats corridor near Guthigar, within the Sullia estate region—close to the Coorg lifestyle without carrying Coorg prices.</p>
-        </div>
-        <div className="location-card">
-          <p className="map-label">Western Ghats <span>Karnataka</span></p>
-          <div className="contours" aria-hidden="true"><i /><i /><i /><i /><i /><b>PW</b></div>
-          <div className="place-list">
-            <div><span>Peppy Woods</span><strong>Near Guthigar</strong></div>
-            <div><span>Estate region</span><strong>Sullia</strong></div>
-            <div><span>Coorg lifestyle</span><strong>On the doorstep</strong></div>
-            <div><span>La Cavana Resort</span><strong>40 minutes</strong></div>
-          </div>
         </div>
       </section>
 
@@ -208,24 +185,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="resort section-wide">
-        <div className="resort-image resort-collage">
-          <img className="resort-cabin" src="/gallery/la-cavana-cabin.png" alt="A wooden La Cavana cabin surrounded by trees" loading="lazy" />
-          <img className="resort-hillside" src="/gallery/la-cavana-hillside.png" alt="La Cavana Resort on a green hillside at sunset" loading="lazy" />
+      <section className="buyer-section section">
+        <div className="buyer-heading">
+          <p className="eyebrow">The proposition</p>
+          <h2>Why buyers are considering Peppy Woods.</h2>
+          <p>Clearer fundamentals, professionally planned plantation management and a long-term view of land and crops.</p>
         </div>
-        <div className="resort-copy">
-          <span>40 minutes away</span>
-          <p className="eyebrow">La Cavana Resort, down the road</p>
-          <h2>Own the plantation.<br />Borrow the resort.</h2>
-          <p>Pool days, dining and stays at La Cavana pair with your estate weekends—the best of both.</p>
-        </div>
-      </section>
-
-      <section className="stories section">
-        <div className="stories-heading"><p className="eyebrow">Owners&apos; stories</p><h2>People who bought a hill.</h2></div>
-        <div className="story-grid">
-          {stories.map(([quote, name, role]) => (
-            <blockquote key={name}><p>{quote}</p><div className="story-byline"><strong>{name}</strong><span>{role}</span></div></blockquote>
+        <div className="buyer-grid">
+          {buyerConsiderations.map(([title, text], index) => (
+            <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>
           ))}
         </div>
       </section>
@@ -239,35 +207,42 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="location section" id="location">
+        <div className="location-copy">
+          <p className="eyebrow">Location</p>
+          <h2>Near Guthigar,<br />Sullia.</h2>
+          <p className="location-address">Western Ghats · Karnataka</p>
+          <p>Peppy Woods is located near Guthigar in the Sullia estate region, with access to the wider Coorg hill country. Exact site access and parcel details are shared during a scheduled land visit.</p>
+        </div>
+        <div className="location-card">
+          <p className="map-label">Peppy Woods <span>Location overview</span></p>
+          <div className="contours" aria-hidden="true"><i /><i /><i /><i /><i /><b>PW</b></div>
+          <div className="place-list">
+            <div><span>Plantation</span><strong>Near Guthigar</strong></div>
+            <div><span>Estate region</span><strong>Sullia</strong></div>
+            <div><span>Landscape</span><strong>Western Ghats</strong></div>
+            <div><span>State</span><strong>Karnataka</strong></div>
+          </div>
+        </div>
+      </section>
+
       <section className="visit section-wide" id="visit">
         <div className="visit-copy">
-          <div className="visit-price" aria-label="Original price 1.2 crore. Launch price 37 lakhs per acre">
-            <div className="price-kicker"><del>₹1.2 crore</del><span>Launch price</span></div>
-            <strong><b>₹37</b> lakhs</strong>
-            <small>per acre*</small>
+          <div className="visit-price" aria-label="Pre-booking launch offer: 37 lakh per acre for 3-acre bookings">
+            <div className="price-kicker"><span>Pre-booking launch offer</span></div>
+            <strong><b>₹37</b> lakh</strong>
+            <small>per acre* · for 3-acre bookings</small>
+            <p className="price-context">Standard starting price: ₹80 lakh per acre. Limited inventory is available during the launch phase.</p>
           </div>
           <h2>Invest in nature.<br />Grow with time.<br />Leave a legacy.</h2>
           <p>Come walk the land—the mist does the convincing.</p>
-          <div className="contact-actions">
-            <a className="text-link light" href="mailto:hello@peppywoods.in?subject=Peppy Woods brochure request">Download brochure</a>
-            <a className="text-link light" href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20speak%20to%20a%20Peppy%20Woods%20advisor." target="_blank" rel="noreferrer">Talk to an advisor</a>
-          </div>
         </div>
         <div className="visit-form-wrap">
-          {submitted ? (
-            <div className="success" role="status"><span>✓</span><h3>Your visit request is noted.</h3><p>The Peppy Woods team will reach out to plan the details.</p><button className="text-link light" onClick={() => setSubmitted(false)}>Send another request</button></div>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              <label><span>Your name</span><input name="name" autoComplete="name" required placeholder="Full name" /></label>
-              <div className="form-row">
-                <label><span>Phone</span><input name="phone" type="tel" autoComplete="tel" required placeholder="+91" /></label>
-                <label><span>Email</span><input name="email" type="email" autoComplete="email" required placeholder="you@email.com" /></label>
-              </div>
-              <label><span>I&apos;m interested in</span><select name="interest" defaultValue="A private site visit"><option>A private site visit</option><option>Ownership details</option><option>Investment and management plan</option></select></label>
-              <button className="button button-gold" type="submit">Schedule a site visit <span>→</span></button>
-              <small>By submitting, you agree to be contacted about Peppy Woods.</small>
-            </form>
-          )}
+          <div className="contact-hold">
+            <span>Verified sales contact</span>
+            <h3>Official contact details will be added shortly.</h3>
+            <p>The Soil Systems sales phone, WhatsApp and email are intentionally left blank until the official channels are confirmed.</p>
+          </div>
         </div>
       </section>
 
@@ -276,9 +251,9 @@ export default function Home() {
           <a className="brand footer-brand" href="#top"><span className="brand-mark">PW</span><span><strong>Peppy Woods</strong><small>Managed estates</small></span></a>
           <p>A managed plantation by Soil Systems, near Guthigar, Sullia—on the doorstep of Coorg.</p>
         </div>
-        <div className="footer-links"><strong>Explore</strong><a href="#about">About</a><a href="#invest">Why invest</a><a href="#location">Location</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#visit">Contact</a></div>
-        <div className="footer-links"><strong>Contact</strong><a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">WhatsApp us</a><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:hello@peppywoods.in">hello@peppywoods.in</a></div>
-        <small>© 2026 Peppy Woods · Soil Systems <span>·</span> <a href="#">Privacy policy</a> <span>·</span> *Pricing and crop timelines are indicative and subject to documentation, agricultural conditions and availability.</small>
+        <div className="footer-links"><strong>Explore</strong><a href="#about">About</a><a href="#invest">Why invest</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#location">Location</a><a href="#visit">Contact</a></div>
+        <div className="footer-links contact-placeholder"><strong>Contact</strong><span>Sales phone —</span><span>WhatsApp —</span><span>Email —</span></div>
+        <small>© 2026 Peppy Woods · Soil Systems <span>·</span> <a href="#">Privacy policy</a> <span>·</span> *₹37 lakh per acre is a limited pre-booking launch offer for 3-acre bookings. Standard starting price is ₹80 lakh per acre. Pricing, availability, crop timelines and yields are indicative and subject to documentation, legal verification, approvals, agricultural conditions and performance.</small>
       </footer>
     </main>
   );
