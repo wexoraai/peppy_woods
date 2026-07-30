@@ -209,17 +209,17 @@ export default function Home() {
 
       <section className="location section" id="location">
         <div className="location-copy">
-          <p className="eyebrow">Location</p>
-          <h2>Near Guthigar,<br />Sullia.</h2>
-          <p className="location-address">Western Ghats · Karnataka</p>
+          <p className="eyebrow">Location · Western Ghats</p>
+          <h2>Near <strong>Coorg.</strong></h2>
+          <p className="location-address">Guthigar · Sullia · Karnataka</p>
           <p>Peppy Woods is located near Guthigar in the Sullia estate region, with access to the wider Coorg hill country. Exact site access and parcel details are shared during a scheduled land visit.</p>
         </div>
         <div className="location-card">
           <p className="map-label">Peppy Woods <span>Location overview</span></p>
           <div className="contours" aria-hidden="true"><i /><i /><i /><i /><i /><b>PW</b></div>
           <div className="place-list">
-            <div><span>Plantation</span><strong>Near Guthigar</strong></div>
-            <div><span>Estate region</span><strong>Sullia</strong></div>
+            <div><span>Hill country</span><strong>Near Coorg</strong></div>
+            <div><span>Plantation</span><strong>Near Guthigar, Sullia</strong></div>
             <div><span>Landscape</span><strong>Western Ghats</strong></div>
             <div><span>State</span><strong>Karnataka</strong></div>
           </div>
