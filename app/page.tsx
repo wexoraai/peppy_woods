@@ -686,6 +686,7 @@ export default function Home() {
           <a href="/coorg">Coorg guide</a>
           <a href="#questions">Buyer questions</a>
           <a href="#request-visit">Request a quote or visit</a>
+          <a href="/privacy-policy">Privacy policy</a>
         </div>
         <div className="footer-note">
           <strong>Important</strong>
@@ -695,7 +696,7 @@ export default function Home() {
             documents independently before purchase.
           </p>
         </div>
-        <small>© 2026 Peppy Woods · Managed by Soil Systems</small>
+        <small>© 2026 Peppy Woods · Managed by Soil Systems · <a href="/privacy-policy">Privacy policy</a></small>
       </footer>
     </main>
   );
