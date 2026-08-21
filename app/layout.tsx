@@ -26,9 +26,9 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ??
     (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "Peppy Woods | Managed Estates near Coorg";
+  const title = "Peppy Woods | One-Acre Managed Estate in Coorg";
   const description =
-    "Own a managed coffee, pepper and timber estate in the Western Ghats near Coorg.";
+    "Explore managed estate plots near Coorg: one acre valued at ₹83 Lakhs with a ₹37 Lakh launch offer, and 0.5 acre valued at ₹41 Lakhs with a ₹20 Lakh launch offer.";
 
   return {
     title,
@@ -41,13 +41,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       type: "website",
-      images: [{ url: `${origin}/og.png`, width: 1200, height: 630 }],
+      images: [{ url: `${origin}/og-v3.png`, width: 1731, height: 909 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og.png`],
+      images: [`${origin}/og-v3.png`],
     },
   };
 }
